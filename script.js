@@ -1,7 +1,3 @@
-// Ko man reiks//
-// fetch api
-//paieska
-//filtras
 const saliuTempl = document.getElementById("countries");
 const filterMyg = document.getElementById("filter");
 const filterReg = document.querySelectorAll("li");
@@ -56,9 +52,9 @@ paieska.addEventListener('input', e => {
   pavadinimas.forEach(name => {
     console.log(name.innerHTML);
     if(name.innerText.toLowerCase().includes(value.toLowerCase())) {
-      name.parentElement.parentElement.style.display = 'block';
+      name.parentElement.parentElement.parentElement.style.display = 'block';
     } else {
-      name.parentElement.parentElement.style.display = 'none';
+      name.parentElement.parentElement.parentElement.style.display = 'none';
     }
   });
 });
@@ -71,9 +67,9 @@ paieska.addEventListener('input', e => {
   countryRegion.forEach(region => {
   
   if(region.innerText.includes(value)|| value === 'All') {
-      region.parentElement.parentElement.style.display = 'block';
+      region.parentElement.parentElement.parentElement.style.display = 'block';
     } else {
-      region.parentElement.parentElement.style.display = 'none';
+      region.parentElement.parentElement.parentElement.style.display = 'none';
     }
 } )
 });
