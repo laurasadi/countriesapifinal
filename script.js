@@ -6,8 +6,12 @@ const paieska = document.getElementById("search");
 gaunamSalys();
 
 async function gaunamSalys(){
+  try{
   const response = await fetch('https://restcountries.eu/rest/v2/all');
   const salis = await response.json();
+  } catch(error) {
+    console.log(error);
+  }
 
   rodykSalis(salis);
 
