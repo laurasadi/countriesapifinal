@@ -25,9 +25,9 @@ function rodykSalis(salis){
 
           <div class="countryBody">
             <h2 class = "saliespav">${country.name}</h2>
-            <p><strong>Population: </strong>${country.population}</p>
+            <p><strong>Currencies: </strong>${country.currencies.filter(c => c.name).map(c => `${c.name} (${c.code})`).join(", ")}</p>
             <p class = "countryRegion"><strong>Region: </strong>${country.region}</p>
-            <p><strong>Capital: </strong>${country.capital}</p>
+            <p><strong>Languages: </strong>${country.languages.filter(l => l.name).map(l =>`${l.name} (${l.nativeName})`).join(", ")}</p>
           </div>
         </div>
 `
